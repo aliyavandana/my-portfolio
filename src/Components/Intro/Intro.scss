@@ -1,0 +1,118 @@
+.Intro {
+	display: flex;
+	.IntroText {
+		float: left;
+		width: 50%;
+		position: relative;
+		.IntroTextHeader {
+			font-family: "Bevan", sans-serif;
+			font-size: 6vw;
+			opacity: 1;
+			position: relative;
+			margin: auto;
+		}
+		.IntroTextDescription {
+			font-size: 4vw;
+			font-family: "Ubuntu", "Uchen", sans-serif;
+			background: #ff0;
+			padding: 0 20px;
+			text-align: left;
+			position: relative;
+			width: fit-content;
+			float: right;
+			margin-right: 50px;
+		}
+	}
+	.bubbleAnimation {
+		width: 100px;
+		height: 100px;
+		background-color: #572d90;
+		position: relative;
+		animation-name: BubbleOne;
+		animation-duration: 4s;
+		animation-iteration-count: infinite;
+		border-radius: 50px;
+	}
+	@keyframes BubbleOne {
+		0% {
+			background-color: #572d90;
+			left: 200px;
+			top: 100px;
+		}
+		33% {
+			background-color: #a487c9;
+			left: 200px;
+			top: 200px;
+		}
+		66% {
+			background-color: #572d90;
+			left: 0px;
+			top: 200px;
+		}
+		100% {
+			background-color: #572d90;
+			left: 400px;
+			top: 100px;
+		}
+	}
+	.bubbleAnimationTwo {
+		width: 50px;
+		height: 50px;
+		background-color: #572d90;
+		position: relative;
+		animation-name: BubbleTwo;
+		animation-duration: 4s;
+		animation-iteration-count: infinite;
+		border-radius: 50px;
+	}
+	@keyframes BubbleTwo {
+		0% {
+			background-color: #572d90;
+			left: 200px;
+			top: 200px;
+		}
+		33% {
+			background-color: #a487c9;
+			left: 100px;
+			top: 100px;
+		}
+		66% {
+			background-color: #572d90;
+			left: 0px;
+			top: 100px;
+		}
+		100% {
+			background-color: #572d90;
+			left: 200px;
+			top: 200px;
+		}
+	}
+
+	.IntroImg {
+		float: right;
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.Intro {
+		flex-direction: column;
+		text-align: left;
+		margin: 5vw !important;
+		.IntroText {
+			width: auto !important;
+			.IntroTextDescription {
+				float: none !important;
+			}
+		}
+		.IntroImg {
+			width: 90vw !important;
+		}
+		.bubbleAnimationTwo {
+			display: none !important;
+		}
+		.bubbleAnimation {
+			display: none !important;
+		}
+	}
+}

@@ -1,13 +1,12 @@
-import './App.css';
+import "./App.css";
+import Intro from "./Components/Intro/Intro";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-       <h1>WIP</h1>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+				<Intro />
+		</div>
+	);
 }
 
 export default App;
